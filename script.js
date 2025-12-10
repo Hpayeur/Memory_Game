@@ -5,8 +5,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
+  if (lockBoard) return;
+  if (this === firstCard) return;
   this.classList.toggle("flip");
 
   if (!hasFlippedCard) {
@@ -28,11 +28,11 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
-    resetBoard();
+  resetBoard();
 }
 
 function unflipCards() {
-    lockBoard = true;
+  lockBoard = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
@@ -40,11 +40,9 @@ function unflipCards() {
   }, 1000);
 }
 
-
-
-function resetBoard(){
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
 
 (function shuffle() {
