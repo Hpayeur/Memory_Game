@@ -7,7 +7,7 @@
 body {
   display: flex;
   height: 100vh;
-  background-color: #7dbbc7;
+  background-color: #82c0c4;
 }
 
 .memory-game {
@@ -37,7 +37,7 @@ body {
   height: 100%;
   padding: 20px;
   position: absolute;
-  background-color: #5c8892;
+  background-color: #56b6bd;
 }
 
 /* img {
