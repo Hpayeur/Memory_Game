@@ -5,6 +5,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
+    if (lockBoard) return;
   this.classList.toggle("flip");
 
   if (!hasFlippedCard) {
@@ -29,9 +30,11 @@ function disableCards() {
 }
 
 function unflipCards() {
+    lockBoard = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
+    lockBoard = false;
   }, 1000);
 }
 
